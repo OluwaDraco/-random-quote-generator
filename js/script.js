@@ -83,7 +83,9 @@ function getRandomQuote(arr){
 }
 
 
-
+/***
+ * Generates a random color
+ ***/
 function randomColorGenerator(){
   let color = "#";
   color += Math.floor(Math.random() * 16777215).toString(16);
@@ -106,7 +108,9 @@ function printQuote(){
   <p class="source">${randomQuote.source}  
   
   `;
-
+/**
+ * Checks for "citation","year" and "tags" properties of the Qoute object.
+ */
   if(randomQuote.citation){
     html +=`<spam> ${randomQuote.citation} </spam>`;
   }
@@ -118,7 +122,10 @@ function printQuote(){
   }
 
 html+=`</p>`;
+
+//chages the backgound Color of the body
 document.body.style.backgroundColor =randomColorGenerator();
+
 return document.getElementById('quote-box').innerHTML = html;
 
 }
@@ -129,6 +136,7 @@ return document.getElementById('quote-box').innerHTML = html;
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
+//Calls the printQoute fuction every 20 seconds
 setInterval(printQuote,20000)
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
