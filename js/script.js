@@ -64,6 +64,19 @@ let quotes = [
 
     year:1895
 
+  },
+
+  {
+    source: 'Friedrich Nietzsche',
+ 
+    quote: ` “i have never pondered over questions that are not questions.” `,
+
+    citation:' On the Genealogy of Morality', 
+
+    tags: 'philosophy',
+
+    year:1895
+
   }
 
 
@@ -84,7 +97,8 @@ function getRandomQuote(arr){
 
 
 /***
- * Generates a random color
+ * Generates a random color(from Css-tricks)
+ * https://css-tricks.com/re-pleasing-color-palettes/
  ***/
 function randomColorGenerator(){
   let color = "#";
